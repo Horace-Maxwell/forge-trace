@@ -1,0 +1,32 @@
+name: forge-trace
+description: Capture a coding-agent trace around a command and optionally upload it to a collector.
+inputs:
+  session-id:
+    description: Optional session id.
+    required: false
+    default: ""
+  command:
+    description: Command to execute under trace.
+    required: true
+  upload-artifacts:
+    description: Whether to keep local trace artifacts.
+    required: false
+    default: "true"
+  collector-url:
+    description: Optional collector endpoint.
+    required: false
+    default: ""
+  api-key:
+    description: Optional collector API key.
+    required: false
+    default: ""
+outputs:
+  session_id:
+    description: Trace session id.
+  summary_path:
+    description: Local summary path.
+  share_url:
+    description: Collector share url when available.
+runs:
+  using: node20
+  main: packages/action/dist/index.js

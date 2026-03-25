@@ -1,0 +1,15 @@
+name = "forge-trace"
+main = "apps/worker/dist/worker.js"
+compatibility_date = "2025-03-01"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "forge_trace"
+database_id = "local-forge-trace"
+
+[[r2_buckets]]
+binding = "ARTIFACTS"
+bucket_name = "forge-trace-artifacts"
+
+[vars]
+APP_NAME = "Forge Trace"

@@ -1,0 +1,22 @@
+{
+  "name": "forge-trace",
+  "version": "0.2.0",
+  "type": "module",
+  "bin": {
+    "forge-trace": "dist/cli.js"
+  },
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
+  "files": [
+    "dist"
+  ],
+  "bundleDependencies": [
+    "@forge-trace/core"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json"
+  },
+  "dependencies": {
+    "@forge-trace/core": "^0.2.0"
+  }
+}

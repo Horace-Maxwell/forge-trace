@@ -1,0 +1,16 @@
+name: forge-trace
+
+on:
+  workflow_dispatch:
+
+jobs:
+  traced-run:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: Horace-Maxwell/forge-trace@v1
+        with:
+          command: npm test
+          upload-artifacts: true

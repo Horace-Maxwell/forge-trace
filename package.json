@@ -1,0 +1,24 @@
+{
+  "name": "forge-trace-repo",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "packages/*",
+    "apps/*"
+  ],
+  "scripts": {
+    "build": "npm run build -w @forge-trace/core && npm run build -w forge-trace && npm run build -w @forge-trace/action && npm run build -w @forge-trace/worker",
+    "test": "vitest run",
+    "dev:worker": "wrangler dev",
+    "pack:cli": "npm pack -w forge-trace",
+    "check": "npm run build && npm run test"
+  },
+  "devDependencies": {
+    "@cloudflare/workers-types": "^4.20250320.0",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.3",
+    "typescript": "^5.8.3",
+    "vitest": "^3.2.4",
+    "wrangler": "^4.8.0"
+  }
+}
