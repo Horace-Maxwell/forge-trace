@@ -2,6 +2,8 @@
 
 A black box recorder for coding agents: commands, diffs, tests, and review context in one trace.
 
+Share one trace instead of scattered logs, terminal screenshots, and half-explained diffs.
+
 `Forge Trace` records how a coding agent moved from command to diff to tests. It is intentionally git-aware, test-aware, and review-aware, so teams can share a coding-agent session like a black box recording.
 
 [Self-host with GitHub Action](#github-action) | [Deploy to Cloudflare](https://deploy.workers.cloudflare.com/?url=https://github.com/Horace-Maxwell/forge-trace) | [Collector Setup After Deploy](#cloudflare-deploy)
@@ -48,6 +50,12 @@ npx forge-trace@latest run --session demo -- npm test
 - It gives coding agents a shareable trace permalink instead of scattered logs.
 - It is purpose-built for git, tests, and code review rather than generic LLM telemetry.
 - It can spread as both a GitHub Action and a lightweight hosted collector.
+
+## Why Now
+
+- Coding agents are becoming easier to run, but still hard to review after the fact.
+- Generic LLM tracing misses the software-engineering context maintainers actually care about.
+- `Forge Trace` turns agent runs into a linkable artifact that is easy to demo and easy to compare.
 
 ## Entrypoints
 
