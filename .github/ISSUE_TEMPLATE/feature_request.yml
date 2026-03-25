@@ -1,0 +1,30 @@
+name: Feature request
+description: Suggest a focused improvement to trace quality or install flow
+title: "[Feature]: "
+labels:
+  - enhancement
+body:
+  - type: textarea
+    id: problem
+    attributes:
+      label: What workflow problem should this solve?
+    validations:
+      required: true
+  - type: textarea
+    id: current
+    attributes:
+      label: Current tracing workflow
+      description: Describe what you do today and what is still hard to understand.
+    validations:
+      required: true
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed improvement
+    validations:
+      required: true
+  - type: textarea
+    id: success
+    attributes:
+      label: What would make this a win?
+      description: For example, better summaries, better timeline output, or easier setup.
